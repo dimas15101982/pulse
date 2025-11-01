@@ -4,6 +4,7 @@
 @use 'base/variables';
 @use 'blocks/advantages';
 @use 'blocks/titles';
+@use './media.scss';
 
 
 * {
@@ -14,3 +15,4 @@
     max-width: 950px;
     margin: 0 auto;
 }
+
