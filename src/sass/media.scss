@@ -8,6 +8,30 @@
     .feed-form {
         margin: 15px auto;
     }
+    .carousel {
+        img {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        color: black;
+        border: none;
+    }
+
+    .catalog {
+        .title {
+            font-size: 24px;
+            text-align: center;
+        }
+        &__tabs {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }
 
 
