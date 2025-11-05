@@ -9,6 +9,7 @@
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
+    transition: all 0.5s;
     &_main {
         margin-top: 67px;
         width: 300px;
@@ -25,5 +26,8 @@
         width: 131px;
         height: 40px;
         font-size: 14px;
+    }
+    &:hover {
+        transform: scale(1.2);
     }
 }
