@@ -111,17 +111,17 @@ $(document).ready(function () {
     valideForms('#consultation form');
     valideForms('#order form');
 
-// добавление маски дл яномера телефона в формы
+    // добавление маски дл яномера телефона в формы
     $('input[name=phone]').mask("+7 (999) 999-99-99");
-    
-// отправка писем с сайта
-    $('form').submit(function(e){
+
+    // отправка писем с сайта
+    $('form').submit(function (e) {
         e.preventDefault(); // отмена стандартного поведения браузера (перезагрузка)
         $.ajax({
             type: "POST",
             url: "mailer/smart.php",
             data: $(this).serialize()
-        }).done(function(){
+        }).done(function () {
             $(this).find("input").val("");
             $('#consultation, #order').fadeOut();
             $('.overlay, #thanks').fadeIn('slow');
@@ -131,15 +131,19 @@ $(document).ready(function () {
     });
 
     //  Кнопка ВВЕРХ и ее появление
-    $ (window).scroll(function(){
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 1600) {
             $('.pageup').fadeIn();
         } else $('.pageup').fadeOut();
     });
 
-    $("a[href^='#']").click(function(){
+    // плавное прокручиване сайта при клике по ссылке
+    $("a[href^='#']").click(function () {
         const _href = $(this).attr("href");
-        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
         return false;
-    })
+    });
+
+    // включение wow для анимации отзывов (анимация включается тогда, когда пользователь проматывает сайт до конкретной секции)
+    new WOW().init();
 });
