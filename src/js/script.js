@@ -113,7 +113,8 @@ $(document).ready(function () {
 
 // добавление маски дл яномера телефона в формы
     $('input[name=phone]').mask("+7 (999) 999-99-99");
-
+    
+// отправка писем с сайта
     $('form').submit(function(e){
         e.preventDefault(); // отмена стандартного поведения браузера (перезагрузка)
         $.ajax({
@@ -129,4 +130,16 @@ $(document).ready(function () {
         return false;
     });
 
+    //  Кнопка ВВЕРХ и ее появление
+    $ (window).scroll(function(){
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else $('.pageup').fadeOut();
+    });
+
+    $("a[href^='#']").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    })
 });

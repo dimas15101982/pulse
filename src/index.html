@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <section class="promo">
+    <section class="promo" id="up">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -50,7 +50,7 @@
                 <button data-modal="consultation" class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
                 <div class="promo__link">
                     или
-                    <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
+                    <a href="#catalog">ПЕРЕЙТИ В КАТАЛОГ</a>
                 </div>
             </div>
 
@@ -96,7 +96,7 @@
                 и мы перезвоним вам в течении 10 минут</div>
             <form id="consultation-form" class="feed-form" action="#">
                 <input name="name" type="text" placeholder="Ваше имя" required>
-                <input name="phone"  placeholder="Ваш телефон" required>
+                <input name="phone" placeholder="Ваш телефон" required>
                 <input name="email" type="email" placeholder="Ваш E-mail" required>
                 <button class="button button_submit">Заказать консультацию</button>
             </form>
@@ -119,7 +119,7 @@
         </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog" id="catalog">
         <div class="container">
             <h2 class="title">Каталог пульсометров</h2>
 
@@ -484,7 +484,7 @@
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form feed-form_mt25" action="#">
                 <input name="name" type="text" placeholder="Ваше имя">
-                <input name="phone"  placeholder="Ваш телефон">
+                <input name="phone" placeholder="Ваш телефон">
                 <input name="email" type="email" placeholder="Ваш E-mail">
                 <button class="button button_submit">Заказать консультацию</button>
             </form>
@@ -496,7 +496,7 @@
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
                 <input name="name" type="text" placeholder="Ваше имя" required>
-                <input name="phone"  placeholder="Ваш телефон" required>
+                <input name="phone" placeholder="Ваш телефон" required>
                 <input name="email" type="email" placeholder="Ваш E-mail" required>
                 <button class="button button_submit">купить</button>
             </form>
@@ -505,10 +505,15 @@
         <div class="modal modal_mini" id="thanks">
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">Спасибо за вашу заявку!</div>
-            <div class="modal__descr">Наш менеджер свяжется с вами  в ближайшее время!</div>
-           
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+
         </div>
     </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/up.svg" alt="up">
+    </a>
+
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
