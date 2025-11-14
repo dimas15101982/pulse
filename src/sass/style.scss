@@ -1,11 +1,17 @@
+@use 'libs/bootstrap-reboot.min';
+@use 'libs/font';
+@use 'libs/slick';
+@use 'libs/animate';
+@use 'libs/media.min';
+
 @use 'base/animations';
+
 @use 'blocks/promo';
 @use 'blocks/header';
 @use 'blocks/buttons';
 @use 'base/variables';
 @use 'blocks/advantages';
 @use 'blocks/titles';
-@use './media.scss';
 @use 'blocks/consultation';
 @use 'blocks/forms';
 @use 'blocks/carousel';
